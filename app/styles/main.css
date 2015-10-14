@@ -105,3 +105,16 @@ img {
 .retrait {
 	padding-left: 10pt;
 }
+
+#getFixed {
+	background-color: #4e5d6c;
+	position: fixed;
+	width: 220px;
+	margin-top: 90px;
+	padding: 15px;
+	margin-left: 15%;
+}
+
+a 	{
+	color: white;
+}
