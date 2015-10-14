@@ -1,0 +1,1 @@
+console.log("'Allo 'Allo!"),$(document).ready(function(){"use strict";function a(){var a=$("#getFixed");a.css($(window).scrollTop()>100?{position:"fixed",top:"10px"}:{position:"fixed",top:"auto"})}function b(){var a=$(window).width();"1500">a?$("#getFixed").hide():$("#getFixed").show()}$("a").smoothScroll(),$(window).scroll(a),b(),$(window).resize(function(){b()})});
