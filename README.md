@@ -302,3 +302,13 @@ thumbnailWidth permet de définir la largeur de la miniature.
 thumbnailHeight permet de définir la hauteur de la miniature.
 
 J'ai ainsi pu mettre une galerie photo avec mes différents diplômes.
+
+###Bug affichage police Nano Gallery
+
+J'ai eu un petit problème avec la police d'affichage de nano Gallery.
+En effet, lorsque mon site était en local (lancé avec grunt) il n'y avait pas de problème, les symboles utilisés
+par nano gallery (flèches, bouton play, etc.) fonctionnaient parfaitement. Mais lorsque je "buildais" mon site,
+grunt ne copiait pas la police utilisée par Nano Gallery.
+
+J'ai donc dû manuellement rajouter les polices dans le dossier "dist" et modifier le chemin d'accès de la police
+de nano gallery dans vendor.css (dist) (Il ne pointait pas à la bonne place).
