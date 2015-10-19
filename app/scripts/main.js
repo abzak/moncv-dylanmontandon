@@ -25,4 +25,6 @@ $(document).ready(function(){
 		thumbnailWidth: 165,
         thumbnailHeight: 110,
   });
+  
+  wResize();
 });
