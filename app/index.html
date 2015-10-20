@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>CV Dylan Montandon</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="./styles/main.css" />
 		<link rel="shortcut icon" href="favicon.ico">
@@ -16,8 +17,9 @@
 		<!-- build:css(.tmp) styles/main.css -->
 		<link rel="stylesheet" href="styles/main.css">
 		<!-- endbuild -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
-	<body>
+	<body id="haut">
 		<div class="col-sm-offset-2" id="getFixed">
 			<p><a href='#infosPerso'>Informations personnelles</a></p>
 			<p><a href='#formations'>Formations</a></p>
@@ -32,13 +34,13 @@
 			<br />
 			<div class="row">
 				<div class="col-sm-2 col-sm-offset-2"><img src="./images/moi.jpg" alt="image de moi" class="img-rounded"></div>
-				<div class="col-sm-3 col-sm-offset-3 ">
+				<div class="col-sm-4 col-sm-offset-3 ">
 				<br/>
 					<address>
-					  <strong>Dylan Montandon</strong><br>
-					  Rue de la Gachette 6<br>
-					  2065 Savagnier<br>
-					  <abbr title="Phone">P:</abbr> 079 822 44 13
+					  <strong>Dylan Montandon</strong>
+					  <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Rue de la Gachette 6<br />
+					  2065 Savagnier</p>
+					  <abbr title="Phone"></abbr><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 079 822 44 13
 					</address>
 				</div>	
 			</div>
@@ -143,7 +145,7 @@
 			<div>
 				<table class="table table-striped col-sm-offset-1">
 					<tr>
-						<td>Volley-ball, ski, wakeboard, kitesurf (sport en général)</td>
+						<td><i class="fa fa-bicycle"></i> Sport</td><td><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Voyager</td><td><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Musique</td><td><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Lecture</td>
 					</tr>
 				</table> 
 			</div>
@@ -205,6 +207,7 @@
 						</td>
 					</tr>
 				</table> 
+				<a href="#haut" class="glyphicon glyphicon-menu-up" aria-hidden="true"></a>
 			</div>
 		</div>
  <!-- build:js(.) scripts/vendor.js -->
@@ -235,15 +238,5 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
   </body>
 </html>
