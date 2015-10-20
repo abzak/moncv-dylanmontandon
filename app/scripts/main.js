@@ -6,7 +6,7 @@ $(document).ready(function(){
   function wResize() {
         var winW = $(window).width();
         
-        if ( winW < '1500') {
+        if ( winW < '1200') {
             $("#getFixed").hide(); 
         }
         else {
