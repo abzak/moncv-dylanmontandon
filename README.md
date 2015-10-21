@@ -23,7 +23,7 @@
 
 ##Installation des outils:
 
-Pour commencer, il faut télécharger et installer node.js (npm sera lui aussi installé)
+Pour commencer, il faut télécharger et installer node.js depuis le site officiel (npm sera lui aussi installé)
 
 Lorsque cela est fait, il faut installer yo, bower ainsi que grunt (expliqué plus haut) en faisant cette commande:
 ```
@@ -60,7 +60,7 @@ Maintenant que le squelette de notre site web est fait. nous pouvons exécuter ce
 ```
 grunt serve
 ```
-Cela va permettre de lancer le task manager et ainsi, de pouvoir visualiser notre site web sur un navigateur.
+Cela va permettre de lancer le task manager et ainsi, de pouvoir visualiser notre site web sur un navigateur (http://localhost:9000).
 
 Installation d'un packages bower:
 
@@ -70,7 +70,9 @@ Nous allons installer bootswatch qui est un package permettant de mettre un thèm
 bower install bootswatch --save
 ```
 Cela va installer proprement bootswatch, modifier les dépendances et rajouter une ligne à notre index.html:
-	<link rel="stylesheet" href="bower_components/bootswatch/???/bootstrap.css" />
+```
+<link rel="stylesheet" href="bower_components/bootswatch/???/bootstrap.css" />
+```
 Il suffit maintenant de remplacer les "???" par un nom de thème  afin que celui-ci soit pris en compte.
 
 ##Création du site web:
@@ -80,21 +82,21 @@ J’ai donc séparé mon CV en plusieurs parties (informations personnelles, formati
 J’ai en effet "converti" mon ancien site web en bootstrap, j'ai utilisé pour cela les titres (h1, h2, etc..), les tableaux, les progressbar et les classes définie
 par bootstrap afin que mon site soit "reponsive" c'est a dire qu'il s'adapte à la taille de l'écran.
 
-Pour se faire, j'ai utilisé la classe "col-sm-x col-sm-offset-x" cela signifie que l'élément qui possède cette classe va être small (cela siginifie qu'il faudra
+Pour se faire, j'ai utilisé des classes "col-sm-x col-sm-offset-x" cela signifie que l'élément qui possède ces classes va être small (cela siginifie qu'il faudra
 beaucoup réduire la fenêtre pour que les éléments se mettent à la ligne. Le premier "x" signifie la taille que va prendre l'élément et le deuxième signifie le décalage.
-x allant de 0 à 12 en se basant sur le grid (le grid c'est simplement un "grillage" de la page web pour un totale de 12 "cellules").
+x allant de 0 à 12 en se basant sur le grid (le grid c'est simplement un "grillage" de la page web pour un totale de 12 "cellules") cela permet de placer des éléments facilement.
 
 J’ai donc créé mon site web de cette façon, sans avoir à gérer le CSS (c'est en effet bootstrap que le fait à notre place) et cela permet d'avoir
 rapidement un site web fonctionnel en très peu de lignes de code.
 
 Je vérifiais régulièrement si la mise en page de mon site me convenait.
-Lorsque ceci vu terminé, j'ai appliqué un thème bootswatch à mon site afin qu'il soit plus beau visuellement. (superhero)
+Lorsque ceci fut terminé, j'ai appliqué un thème bootswatch à mon site afin qu'il soit plus beau visuellement. (superhero)
 
-Ceci était la première version de mon site, j'ai donc utilisé git pour pouvoir gérer mes versions.
+Ceci était la première version de mon site (1.0.0), j'ai donc utilisé git pour pouvoir le stocker en ligne.
 
 ##Installation et utilisation de Git:
 
-Mr. Fritsher nous a donné le lien afin d'accéder au git de la heg, il a donc simplement fallu créer un compte afin pouvoir rejoindre gitHub. (https://github.com/heg-web)
+Mr. Fritsher nous a donné le lien afin d'accéder au git de la HEG, il a donc simplement fallu créer un compte afin de pouvoir rejoindre gitHub. (https://github.com/heg-web)
 
 Pour installer git il faut aller sur le site de gitHub (https://desktop.github.com/) et installer gitHub desktop.
 Une fois l'installation terminé, il faut ouvrir un git shell (il s'est installé en même temps que gitHub desktop)
@@ -114,7 +116,7 @@ le nom de la commande parle d'elle même, cela permet d'initialiser un repo vide.
 
 il faut maintenant ajouter les fichiers souhaités dans le repo vide:
 ```
-git add . //le "." signifie que TOUT les fichiers sont ajouté repo local
+git add . --all //le "." signifie que TOUT les fichiers sont ajouté repo local
 ```
 
 Il faut maintenant valider les modifications (dans notre cas, l'ajout du projet au repo) (pas effectif sur le serveur)
@@ -141,7 +143,7 @@ Cela permet de réellement avoir notre projet sur git.
 ##Versionning
 
 Afin de pouvoir spécifier à notre projet une version (1.0.0) il faut aller dans notre repo personnel
-surgithub (https://github.com/heg-web/moncv-dylanmontandon) puis dans "releases" > draft a new release
+sur github (https://github.com/heg-web/moncv-dylanmontandon) puis dans "releases" > draft a new release
 entrer le tag de version désirée (1.0.0) comme target "master" il faut nommer la release puis "publish release"
 
 Ainsi, le projet est en ligne sur gitHub et c'est la version 1.0.0!
@@ -189,7 +191,7 @@ Notre site est donc bien mis en ligne!
 ##Amélioration Site web
 ####SmoothScroll
 Maintenant que mon site est en ligne (version 1.0.0) j'ai décidé de rajouter un plugin jQuery à mon site web
-Afin que lorsque je fais un raccourci interne sur ma page web (jusqu'à la rubrique "formation"), que la page descende de manière fluide et non pas d'un coup. Pour cela, j'ai rajouté le plugin "smooth scroll en exécutant
+afin que lorsque je fais un raccourci interne sur ma page web (jusqu'à la rubrique "formation" par exemple), la page descende de manière fluide. Pour cela, j'ai rajouté le plugin "smooth scroll" en exécutant
 cette commande:
 
 ```
@@ -197,13 +199,16 @@ bower install jquery-smooth-scroll --save
 ```
 
 Bower va installer le plugin et gérer toutes les dépendances
-l'option --save permet de sauvegarder le plugin dans le fichier bower.json ("nanogallery": "~5.8.0"), il va aussi rajouter dans notre index.html une ligne:
+l'option --save permet de sauvegarder le plugin dans le fichier bower.json ("nanogallery": "~5.8.0"). Ainsi, lorsqu'une personne veux installer mon projet chez lui, bower va automatiquement
+installer les plugins présent dans le fichier bower.json.
+
+Il va aussi rajouter dans notre index.html une ligne:
 
 ```
 <script src="/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
 ```
 
-Cette ligne permet à notre site web d'utiliser le plugin.
+Cette ligne permet à notre site web d'utiliser le plugin (c'est un lien sur le script).
 
 il suffit maintenant d'éditer le fichier "main.js" se trouvant dans le dossier "scripts" et d'y insérer ceci:
 ```
@@ -215,8 +220,13 @@ Le use strict signifie que l'on veut que notre fichier JavaScript s'exécute en m
 n'acceptera pas certaine chose (suppression d'un élément qui n'existe pas, utilisation d'une variable non déclarée.
 Il affichera une erreur si tel est le cas.
 
-La deuxième ligne veut dire que TOUS les éléments "a" vont utilisés la méthode smoothScroll()
+La deuxième ligne veut dire que TOUS les éléments "a" vont utiliser la méthode smoothScroll()
 (c'est une méthode du plugin que nous venons d'installer)
+
+Maintenant il ne reste plus qu'à faire pointer notre balise <a> sur un élément. Exemple:
+
+<a href='#BasDeLePage'>Où je veux aller</a>
+<h1 id='BasDeLePage'>là ou mon lien va pointer</h1>
 
 ###FixedBlock
 
@@ -227,14 +237,14 @@ rubriques de mon site avec un lien sur ceux-ci (utilisation de smoothscroll).
 Il m'a alors suffit de créer un div. J'ai ensuite fait du CSS afin de placer mon block où je désirais qu'il soit
 de sorte à ce qu'il ne bouge pas lors du "scroll" j'ai donc utilisé la propriété "position: fixed".
 
-Malheureusement, lorsque je réduisais la page, au bout d'un moment le block chevauchait le contenu
-de ma page web. J'ai donc décidé de faire en sorte que le block disparaisse lorsque la fenêtre avec une certaine taille. J'ai trouvé une fonction JavaScript me permettant de faire ceci:
+Malheureusement, lorsque je réduisais la page, au bout d'un moment le block chevauchait le "corps" de mon site
+de ma page web. J'ai donc décidé de faire en sorte que le block disparaisse lorsque la fenêtre avait une certaine taille. J'ai trouvé une fonction JavaScript me permettant de faire ceci:
 
 ```
 function wResize() {
          var winW = $(window).width();
          
-         if ( winW < '1500') {
+         if ( winW < '1200') {
              $("#getFixed").hide(); 
          }
          else {
@@ -244,7 +254,7 @@ function wResize() {
      }
 ```
 
-Cette fonction va vérifier si la fenêtre fait moins de 1500 pixels, si c'est le cas, elle fait disparaître mon block,
+Cette fonction va vérifier si la fenêtre fait moins de 1200 pixels, si c'est le cas, elle fait disparaître mon block,
 sinon, elle le fait apparaître.
 
 Il faut maintenant faire en sorte que cette fonction s'exécute à chaque fois que la page change de taille:
@@ -257,6 +267,11 @@ $(window).resize(function() {
 La fonction $(window).resize est une fonction JavaScript permettant d'exécuter du code à chaque changement
 de taille de la page web.
 
+J'ai dû résoudre un autre problème. En effet, lorsque je rafraichissais la page lorsque celle-ci était inférieur à 1200 pixels,
+le block s'affichait quand même. il m'a simplement fallu appeler ma fonction "wResize" en dehors de "resize" car comme son nom
+l'indique, la fonction resize s'exécute à chaque fois que l'on redimensionne la fenêtre, mais lorsque nous arrivons pour la première
+fois sur le site (ou que l'on fait un F5), le code à l'intérieur de la fonction resize ne s'exécute pas.
+
 Désormais mon site possède un block qui reste fixe en tout temps et qui disparait lorsque la page devient
 trop petite.
 
@@ -264,7 +279,7 @@ trop petite.
 
 J'ai décidé de rajouter un plugin jQuery sur mon site web, nano gallery.
 
-C'est un plugin permettant d'insérer une galerie photo très facilement et l'avantage de ce plugin est
+C'est un plugin permettant d'insérer une galerie photo très facilement. L'avantage de ce plugin est
 qu'il est responsive. C’est-à-dire que la galerie va s'adapter en fonction de la taille de l'écran.
 Pour se faire j'ai tout d'abord installer le plugin:
 
@@ -273,19 +288,19 @@ bower install nanogallery --save
 ```
 Comme je l'ai mentionné plus haut, l'option --save permet de sauvegarder le plugin dans le fichier bower.json.
 
-Bower à aussi rajouter la ligne permettant de lier le fichier JavaScript et le fichier CSS de nano gallery à
+Bower a aussi rajouté la ligne permettant de lier le fichier JavaScript et le fichier CSS de nano gallery à
 mon index.
 
 Il m'a simplement suffit de créer un div dans mon index comme ceci:
 ```
 <div id="diplome">
-	<a href="image1.jpg" data-ngthumb="image1Miniature.jpg"></a>
-	<a href="image2.png" data-ngthumb="image2Miniature.png"></a>
-	<a href="image3.png" data-ngthumb="image3Miniature.png"></a>
+	<a href="cfc.jpg" data-ngthumb="cfcMiniature.jpg">CFC</a>
+	<a href="mention.jpg" data-ngthumb="mentionMiniature.jpg">Mention</a>
+	<a href="matu.jpg" data-ngthumb="matuMiniature.jpg">Matu</a>
 </div>
 ```
 C'est simplement une suite d'image insérée les unes après les autres, il faut simplement
-ajouter "data-ngthumb" afin d'avoir la miniature des images.
+ajouter "data-ngthumb" afin que la miniature des images s'affiche.
 Il a aussi fallu que je rajoute ces quelques lignes à mon fichier main.js:
 ```
 $("#diplome").nanoGallery({
@@ -296,10 +311,10 @@ $("#diplome").nanoGallery({
   });
 ```
 
-itemsBaseURL permet de savoir où sont stockées les images.
-paginationMaxLinesPerPage permet de définir le nombre de ligne de la gallerie.
-thumbnailWidth permet de définir la largeur de la miniature.
-thumbnailHeight permet de définir la hauteur de la miniature.
+itemsBaseURL: permet de savoir où sont stockées les images.
+paginationMaxLinesPerPage: permet de définir le nombre de ligne de la gallerie.
+thumbnailWidth: permet de définir la largeur de la miniature.
+thumbnailHeight: permet de définir la hauteur de la miniature.
 
 J'ai ainsi pu mettre une galerie photo avec mes différents diplômes.
 
@@ -310,5 +325,11 @@ En effet, lorsque mon site était en local (lancé avec grunt) il n'y avait pas de
 par nano gallery (flèches, bouton play, etc.) fonctionnaient parfaitement. Mais lorsque je "buildais" mon site,
 grunt ne copiait pas la police utilisée par Nano Gallery.
 
-J'ai donc dû manuellement rajouter les polices dans le dossier "dist" et modifier le chemin d'accès de la police
+J'ai donc dû manuellement rajouter les polices dans le dossier "dist/fonts" et modifier le chemin d'accès de la police
 de nano gallery dans vendor.css (dist) (Il ne pointait pas à la bonne place).
+
+
+Mon site est maintenant en ligne (visible sur internet), est en version 2.0 et toutes les fonctionnalités que j'ai voulu mettre fonctionnent parfaitement.
+
+
+Dylan Montandon.
